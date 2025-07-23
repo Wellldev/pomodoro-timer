@@ -77,18 +77,36 @@ body {
 
 /* Cronômetro e controle */
 #timer {
-  font-size: 4rem;
+  font-size: 8rem;
+  font-weight: bold;
   margin: 1.5rem 0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .controls button {
   font-size: 1.5rem;
   margin: 0 0.5rem;
+  padding: 10px 16px;
+  border: 1px solid #d1d1d100;         /* cor da borda */
+  border-radius: 10px;            /* cantos arredondados */
+  background-color: #f0f0f0;      /* cor de fundo */
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
+
+.controls button:hover {
+  background-color: #ffffff;      /* muda fundo no hover */
+  border-color: #66666600;             /* muda borda no hover */
+  transform: scale(1.05);         /* efeito de leve zoom */
+}
+
 
 /* Oculta tela */
 .screen.hidden {
   display: none;
+
 }
 
 /* Responsivo */

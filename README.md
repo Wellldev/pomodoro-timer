@@ -6,7 +6,7 @@ Um app de Pomodoro simples, bonito e responsivo para te ajudar a manter o foco e
 
 ## 📸 Tela inicial
 
-![Tela inicial do Pomo Timer](./Tela-inicial-pomo.png)
+![Tela inicial do Pomo Timer](./img/Tela-inicial-pomo.png)
 
 ---
 

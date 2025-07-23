@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomo Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TELA INICIAL -->
+  <section id="home-screen" class="screen">
+
+    <!-- Título principal -->
+    <h1 class="logo">⏰ Pomo Timer</h1>
+    <h2 class="subtitle">Escolha um modo para começar:</h2>
+    <p class="subtitle">Você pode personalizar os valores</p>
+
+
+    <!-- Botões com inputs de tempo integrados -->
+    <div class="mode-buttons">
+      
+      <!-- Modo Foco -->
+      <div class="mode-card">
+        <button onclick="startMode('focus')">🧠 Foco</button>
+        <label>
+          <input type="number" id="focus-time" value="25" min="1" /> min
+        </label>
+      </div>
+
+      <!-- Modo Pausa Curta -->
+      <div class="mode-card">
+        <button onclick="startMode('shortBreak')">☕ Pausa Curta</button>
+        <label>
+          <input type="number" id="short-time" value="5" min="1" /> min
+        </label>
+      </div>
+
+      <!-- Modo Pausa Longa -->
+      <div class="mode-card">
+        <button onclick="startMode('longBreak')">😴 Pausa Longa</button>
+        <label>
+          <input type="number" id="long-time" value="15" min="1" /> min
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELA DO CRONÔMETRO -->
+  <section id="timer-screen" class="screen hidden">
+    <h2 id="mode-title">Modo: Foco</h2>
+    <div id="timer">25:00</div>
+
+    <!-- Controles principais -->
+    <div class="controls">
+      <button onclick="toggleTimer()">⏯️</button>
+      <button onclick="skipTimer()">⏩</button>
+      <button onclick="resetTimer()">🔄</button>
+    </div>
+
+    <!-- Exibição do ciclo atual -->
+    <div id="cycle-info">Ciclo: 0 / 4</div>
+  </section>
+
+  <!-- JavaScript principal -->
+  <script src="script.js"></script>
+</body>
+</html>
